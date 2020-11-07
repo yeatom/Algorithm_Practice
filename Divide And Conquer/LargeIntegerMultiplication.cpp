@@ -6,13 +6,11 @@ using namespace std;
 
 vector<int> naive_approach(string a,string b){
     vector<int>product(a.size()+b.size(),0);
-    int current_digit=a.size();
     for(int i=a.size()-1;i>=0;i--){
         for(int j=b.size()-1;j>=0;j--){
             int temp=(a[i]-'0')*(b[j]-'0');
-            product.at(current_digit+j)+=temp;
+            product.at(i+j+1)+=temp;
         }
-        current_digit--;
     }
     for(int i=product.size()-1;i>0;i--){
         if(product.at(i)>9){
