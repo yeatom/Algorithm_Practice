@@ -21,6 +21,7 @@ vector<int> naive_approach(string a,string b){
     while(!*product.begin())product.erase(product.begin());
     return product;
 }
+//Time complexity is O(MN),where M and N represent length of two number.
 
 int main(){
     string a,b;cin>>a>>b;
